@@ -6,10 +6,10 @@ from flask import request, current_app
 
 from Tool.Common_Func import Token
 from Tool.Redis import Redis
-from app.libs.enums import FileTypeEnum
-from app.models.base import db
-from app.libs.error_code import FileError, Forbidden, AuthFailed, NotFound, TokenExceed
-from app.models.pc_user import PcUser
+from app_run.libs.enums import FileTypeEnum
+from app_run.models.base import db
+from app_run.libs.error_code import FileError, Forbidden, AuthFailed, NotFound, TokenExceed
+from app_run.models.pc_user import PcUser
 
 
 def print_time(f):

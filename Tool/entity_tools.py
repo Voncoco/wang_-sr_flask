@@ -66,7 +66,7 @@ def write_to_file(row, tb, tbdesc):
     f.write('\n')
     f.write('import time')
     f.write('\n')
-    f.write('from app.models.base import db')
+    f.write('from app_run.models.base import db')
     f.write('\n')
     f.write(
         'from sqlalchemy import Column, Integer, String, DateTime, Numeric, Boolean, SMALLINT, BigInteger, Float, TEXT, Date')

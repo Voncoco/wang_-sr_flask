@@ -4,7 +4,7 @@ from itsdangerous import JSONWebSignatureSerializer, BadSignature, TimedJSONWebS
 import random
 
 from Tool.Redis import Redis
-from app.libs.error_code import Success, AuthFailed, TokenExceed
+from app_run.libs.error_code import Success, AuthFailed, TokenExceed
 
 
 class Salt:
