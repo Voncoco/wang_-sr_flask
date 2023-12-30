@@ -6,7 +6,7 @@
 @Time    ：2023/12/30 17:07 
 @Function：
 """
-from app import app as application
+from app import app as application, app
 
 if __name__ == '__main__':
-    application.run()
+    application.run(port=app.config['PORT'], debug=True, host=app.config['HOST'])
