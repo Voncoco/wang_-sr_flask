@@ -40,3 +40,7 @@ def framework_error(e):
                                    request=error.request)
         else:
             raise e
+
+
+if __name__ == '__main__':
+    app.run(port=app.config['PORT'], debug=True)

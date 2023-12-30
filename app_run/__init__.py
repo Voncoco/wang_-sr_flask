@@ -72,5 +72,5 @@ def create_app():
     register_blueprints(app)
     register_plugin(app)
     Timing_APScheduler(app)
-    # start_run(app)
+    start_run(app)
     return app
