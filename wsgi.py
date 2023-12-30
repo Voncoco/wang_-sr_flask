@@ -6,4 +6,6 @@
 @Time    ：2023/12/30 17:07 
 @Function：
 """
-from app import app as application
+from run import app as application
+
+application.run()
