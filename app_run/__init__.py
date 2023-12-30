@@ -1,10 +1,8 @@
 def register_blueprints(app):
     from app_run.api.v1 import create_blueprint_v1
-    from app_run.api.v2 import create_blueprint_v2
     from app_run.api.test import create_blueprint_test
     from app_run.api.web import create_blueprint_web
     app.register_blueprint(create_blueprint_v1(), url_prefix='/v1')
-    app.register_blueprint(create_blueprint_v2(), url_prefix='/v2')
     app.register_blueprint(create_blueprint_test(), url_prefix='/t')
     app.register_blueprint(create_blueprint_web(), url_prefix='/web')
 
@@ -51,14 +49,6 @@ def Timing_APScheduler(app):
     atexit.register(Unlock)
 
 
-def start_run(app):
-    """
-    启动时执行的任务
-    """
-    from app_run.controller.oracle_job import Generate_file
-    Generate_file(app)
-
-
 def create_app():
     from .app import Flask
     from .config.Timing_confi_guration import SchedulerConfig
@@ -72,5 +62,4 @@ def create_app():
     register_blueprints(app)
     register_plugin(app)
     Timing_APScheduler(app)
-    start_run(app)
     return app
